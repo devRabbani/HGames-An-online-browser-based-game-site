@@ -12,10 +12,7 @@
    <!-- <iframe src="https://www.gameflare.com/embed/stunt-destroyer/" frameborder="0" scrolling="no" width="500" height="685" allowfullscreen></iframe> -->
    <!-- <iframe src="https://www.crazygames.com/embed/amazing-strange-rope-police-vice-spider" style="width: 100%; height: 100%;" frameborder="0"></iframe> -->
    <script type="module">
-import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
-
-const el = document.createElement('pwa-update');
-document.body.appendChild(el);
+navigator.serviceWorker && navigator.serviceWorker.register(‘./sw.js’).then(function(registration) {  console.log(‘Excellent, registered with scope: ‘, registration.scope);});
    </script>
 </body>
 </html>
