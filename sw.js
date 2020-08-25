@@ -3,8 +3,6 @@ const assets = [
   '/',
   '/index.html',
   '/play.html',
-  '/index.js',
-  '/index.css',
 ];
 // install event
 self.addEventListener('install', evt => {
