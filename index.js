@@ -5,7 +5,10 @@ await apdate();
 });
 
 async function apdate(){
-    const res = await fetch('https://h5games.online/freegames.json');
+    const res = await fetch('/games.json')
+    .catch(error=> {
+    console.log('Looks like there was a problem: \n', error);
+   });
     const json= await res.json();
     main.innerHTML=json.map((game,i)=>{
         if (i<50){
