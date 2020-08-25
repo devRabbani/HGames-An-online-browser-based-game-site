@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=manifest href=manifest.webmenifest>
-    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <title>HGame</title>
 </head>
 <body>
    <center><h1>Games</h1></center>
-   <a href="play.html"><img src="https://s.h5games.online/images/kingdom-pop.jpg" alt=""></a>
+   <div class="main"></div>
    <script>
-   if('serviceWorker' in navigator){
-  navigator.serviceWorker.register('/sw.js')
-    .then(reg => console.log('service worker registered'))
-    .catch(err => console.log('service worker not registered', err));
-}
-   </script>
+    if('serviceWorker' in navigator){
+   navigator.serviceWorker.register('/sw.js')
+     .then(reg => console.log('service worker registered'))
+     .catch(err => console.log('service worker not registered', err));
+ }
+    </script>
+   <script src="/index.js">
 </body>
 </html>
