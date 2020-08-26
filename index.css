@@ -107,3 +107,32 @@ h1 {
       border:none;
   }
 
+  footer {
+    text-align: center;
+    position: relative;
+    height: 60px;
+    clear: both;
+    background-color: #414141;
+    padding: 10px 0;
+    color: white;
+  }
+  footer p {
+    word-spacing: 2px;
+    line-height: 1px;
+  }
+  footer a {
+    color: #afafaf;
+  }
+  .row {
+    width: 100%;
+    background-color: #363636;
+    color: #a3a3a3;
+    padding:10px 0;
+  }
+  .production {
+    text-align: center;
+    margin: 0;
+    word-spacing: 4px;
+    letter-spacing: 3px;
+    font-size: 1.2rem;
+  }

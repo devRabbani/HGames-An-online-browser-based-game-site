@@ -2,6 +2,17 @@ var main = document.querySelector('.main');
 var cursor;
 var i = 0;
 var yu;
+
+    let options = {
+        root  :null,
+        rootMargins : '0px',
+        threshold: 0.5
+    
+    };
+    const observer =new IntersectionObserver(handleIntersect,options);
+    observer.observe(document.querySelector('footer'));
+    getdata();
+
 // window.addEventListener('load', async () => {
 // console.log('linked');
 // await getdata();
@@ -22,7 +33,6 @@ var yu;
 //     }).join('\n')
 
 // };
-
 async function getdata(yu = 0) {
     const res = await fetch('/games.json')
         .catch(error => {
@@ -42,18 +52,25 @@ async function getdata(yu = 0) {
     }
 }
 
-getdata();
-console.log(cursor, i);
-function scrollHandle(){
-    const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
-    if (clientHeight + scrollTop >= scrollHeight-5) {
+function handleIntersect(entries){
+    if(entries[0].isIntersecting){
         getdata(cursor);
-        alert("success")
     }
 }
-window.addEventListener('scroll', () => {
-    scrollHandle();
-});
-window.addEventListener('touchmove', () => {
-    scrollHandle();
-});
+
+
+// console.log(cursor, i);
+// function scrollHandle(){
+//     const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
+//     if (clientHeight + scrollTop >= scrollHeight-5) {
+//         getdata(cursor);
+//     }
+// }
+// window.addEventListener('scroll', () => {
+//     scrollHandle();
+// });
+// window.addEventListener('touchmove', () => {
+//     scrollHandle();
+// });
+
+
