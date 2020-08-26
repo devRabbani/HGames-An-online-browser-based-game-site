@@ -52,6 +52,7 @@ function scrollHandle(){
 }
 window.addEventListener('scroll', () => {
     scrollHandle();
+});
 window.addEventListener('touchmove', () => {
     scrollHandle();
-})
+});
