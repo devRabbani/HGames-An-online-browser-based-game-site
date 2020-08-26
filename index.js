@@ -44,10 +44,14 @@ async function getdata(yu = 0) {
 
 getdata();
 console.log(cursor, i);
-
-window.addEventListener('scroll', () => {
+function scrollHandle(){
     const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
     if (clientHeight + scrollTop >= scrollHeight-5) {
         getdata(cursor);
     }
+}
+window.addEventListener('scroll', () => {
+    scrollHandle();
+window.addEventListener('touchmove', () => {
+    scrollHandle();
 })
