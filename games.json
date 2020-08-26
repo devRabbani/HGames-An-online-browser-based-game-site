@@ -1,5 +1,29 @@
 [
     {
+        "title": "Santa Street Run",
+        "thumb": "https://s.h5games.online/images/santa-street-run.jpg",
+        "link": "https://m.shtoss.com/game/santa-street-run/index.html",
+        "description": "This is our new Christmas game, Santa Street Run. In this game you need to help Snata running on a street and send gifts to kids. There are many obstacles on the road, you need to control Santa avoid all of them. Can you do that?",
+        "category": "other",
+        "tags": "Kids,Highscore,Endless Runner,Christmas,Boys,Avoid",
+        "width": "480",
+        "height": "600",
+        "guid": "santa-street-run",
+        "pubDate": "Mon, 24 Aug 20 10:24:23 +0000"
+    },
+    {
+        "title": "Birds of War",
+        "thumb": "https://s.h5games.online/images/birds-of-war.jpg",
+        "link": "https://m.shtoss.com/game/birds-of-war/index.html",
+        "description": "Birds of War is an online bird fighting game, in this game you need to drive a plane and shoot birds flying in the sky. There are many different kinds of birds, their skills are different too. Be attention to yourself, don't be crashed by them! Good luck!",
+        "category": "shooters",
+        "tags": "Kids,Highscore,Boys,Avoid,Animals",
+        "width": "1280",
+        "height": "720",
+        "guid": "birds-of-war",
+        "pubDate": "Sat, 22 Aug 20 10:24:23 +0000"
+    },
+    {
         "title": "Tank vs Tiles",
         "thumb": "https://s.h5games.online/images/tank-vs-tiles.jpg",
         "link": "https://m.shtoss.com/game/tank-vs-tiles/index.html",
