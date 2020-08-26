@@ -48,6 +48,7 @@ function scrollHandle(){
     const {scrollTop,scrollHeight,clientHeight}=document.documentElement;
     if (clientHeight + scrollTop >= scrollHeight-5) {
         getdata(cursor);
+        alert("success")
     }
 }
 window.addEventListener('scroll', () => {
