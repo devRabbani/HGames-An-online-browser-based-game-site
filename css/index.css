@@ -205,13 +205,6 @@ img {
   width: 165px;
   margin-top: 13px;
 }
-/* .logo {
-  display: inline-block;
-  font-size: 100%;
-  margin-top: 10px;
-  margin-left: 20px;
-  margin-bottom: 10px;
-} */
 
 .promo {
   display: none;
@@ -233,25 +226,30 @@ img {
   margin-right: 3%;
 }
 
-.headline{
-  margin-top:140px;
+.headlineIn,.headlineCa{
   text-align: center;
   color:#fefefe;
   letter-spacing: 5px;
 }
+.headlineIn{
+  margin-top:140px;
+}
+
+.headlineCa{
+  margin-top:10px;
+}
 
 .catbox{
   margin:30px auto 20px;
-  width: 60%;
   text-align: center;
 }
 
 .catbox a{
   display: inline-block;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: uppercase;
-  padding: 2% 3%;
+  padding: 2%;
   margin: 1%;
   background-color: #7f38fb;
   color: rgb(247, 247, 247);
@@ -263,6 +261,10 @@ img {
 
 .catbox a:hover{
   border-color: #7f38fb ;
+}
+
+.catfoot{
+  margin-top: 4%;
 }
 
 
