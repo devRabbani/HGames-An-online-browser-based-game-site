@@ -127,7 +127,6 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3);
 }
 hr{
   width:55%;
-  color: #6e26eb;
 }
 .box p{
    display:inline ;
@@ -240,9 +239,6 @@ img {
   margin-top:140px;
 }
 
-.headlineCa{
-  margin-top:10px;
-}
 
 .catbox{
   margin:30px auto 20px;

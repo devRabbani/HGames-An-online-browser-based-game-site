@@ -30,6 +30,10 @@
         </nav>
     </header>
     <div class="wrapper">
+        <div class='promo bounce-in-fwd1'>
+            <p>Access News fast and offline with our app.</p>
+            <button name=install class=bt>Install</button>
+        </div>
         <h1 class="headlineIn">Games</h1>
         <hr>
         <div class="main"></div>
@@ -46,7 +50,7 @@
 </body>
 <script>
  if('serviceWorker' in navigator){
-navigator.serviceWorker.register('/sw.js')
+navigator.serviceWorker.register('js/sw.js')
  .then(reg => console.log('service worker registered'))
  .catch(err => console.log('service worker not registered', err));
 }

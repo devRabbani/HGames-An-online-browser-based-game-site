@@ -1,22 +1,40 @@
-var main = document.querySelector('.main');
+const main = document.querySelector('.main');
+const a2hs = document.querySelector('.promo');
+const a2hsbtn = document.querySelector('.bt');
+let deferredPrompt;
 var cursor;
 var i = 0;
 var yu;
-
 let options = {
     root: null,
     rootMargins: '0px',
     threshold: 0.5
 
 };
-const observer = new IntersectionObserver(handleIntersect, options);
-try{observer.observe(document.querySelector('.foot'));}
-catch(err){console.log('observer error');}
-getdata();
 
-document.querySelector('.js-nav').addEventListener('click',()=>{
-    document.querySelector('ul').classList.toggle('slide');
-})
+window.addEventListener('load', async () => {
+    const observer = new IntersectionObserver(handleIntersect, options);
+    try{observer.observe(document.querySelector('.foot'));}
+    catch(err){console.log('observer error');}
+    getdata();
+    
+    document.querySelector('.js-nav').addEventListener('click',()=>{
+        document.querySelector('ul').classList.toggle('slide');
+    });
+
+    window.addEventListener('beforeinstallprompt', function (e) {
+        e.preventDefault();
+        deferredPrompt = e;
+        showAddToHomeScreen();
+      });
+    
+});
+
+
+
+
+
+
 
 async function getdata(yu = 0) {
     const res = await fetch('/games.json')
@@ -50,3 +68,22 @@ function handleIntersect(entries) {
     console.log('gud');
 }
 
+function showAddToHomeScreen() {
+    a2hs.style.display = 'block';
+    loader.style.top = '50%';
+    a2hsbtn.addEventListener('click', addToHomeScreen);
+  }
+  function addToHomeScreen() {
+    a2hs.style.display = 'none';
+    loader.style.top = '40%';
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(function (choiceResult) {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+  }
+  
