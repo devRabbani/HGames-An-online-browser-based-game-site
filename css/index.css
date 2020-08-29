@@ -62,7 +62,9 @@ h1 {
 .gameroom{
     height: 100vh;
 }
-
+iframe{
+  border: none;
+}
 .box { 
 background: #D3CCE3;  
 background: -webkit-linear-gradient(to right, #E9E4F0, #D3CCE3);  
@@ -81,6 +83,7 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3);
   .box:hover {
     box-shadow: none;
     border: 2px solid blue;
+    transform: scale(1.05);
   }
   .box h2{
     margin-bottom: 1%;
@@ -92,17 +95,21 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3);
     margin-top: 2%;
     text-transform: uppercase;
     color:white;
-    background-color: #007FFF;
+    background-color:#FF0000;
     padding: 8px;
-    transition: background-color 0.3s ease-out;
+    transition: all 0.3s ease-out;
     border-radius: 13px;
     font-weight: 500;
     outline: none;
   }
   .box a:last-of-type:hover,
   .box a:last-of-type:focus {
-    background-color: #6e26eb;
+    background-color: #9C27B0;
   }
+  .box a:last-of-type:active {
+    transform: scale(0.9);
+  }
+
 .category{
   border:1px solid #7db7f0;
   display: inline-block;
@@ -116,7 +123,7 @@ background: linear-gradient(to right, #E9E4F0, #D3CCE3);
 }
 
 .category:hover{
-  border-color:#3651e9;
+  border-color:rgb(8, 8, 204);
 }
 hr{
   width:55%;
@@ -125,10 +132,6 @@ hr{
 .box p{
    display:inline ;
 }
-  iframe{
-      border:none;
-  }
-
   footer {
     text-align: center;
     position: relative;
@@ -162,10 +165,12 @@ hr{
 
 header{
   background:rgb(221, 221, 223);
+  box-shadow: 0px 4px 20px 0px #595959;
   height: 70px;
   width: 100%;
   position: fixed;
   top:0;
+  z-index: 999;
 }
 
 nav ul{
@@ -184,7 +189,7 @@ nav ul li a{
   border-radius: 7px;
 }
 
-nav a.active,nav a:hover{
+nav ul a.active,nav ul a:hover{
   background:rgb(182, 182, 185) ;
   transition: .5s;
 }
@@ -242,6 +247,7 @@ img {
 .catbox{
   margin:30px auto 20px;
   text-align: center;
+  width: 60%;
 }
 
 .catbox a{
@@ -249,34 +255,145 @@ img {
   font-weight: 300;
   font-size: 1.2rem;
   text-transform: uppercase;
-  padding: 2%;
-  margin: 1%;
+  padding: 10px;
+  margin: 3px;
   background-color: #7f38fb;
   color: rgb(247, 247, 247);
-  border-radius: 20px;
+  border-radius: 10px;
   border: 2px solid rgb(86, 85, 88);
   transition:all .2s ease;
+  cursor: pointer;
 }
 
 
 .catbox a:hover{
-  border-color: #7f38fb ;
+  background-color: #570dd8;
+}
+.catbox a:active{
+ border-color: rgb(190, 187, 187);
 }
 
 .catfoot{
   margin-top: 4%;
 }
 
+.about-section{
+  width:60%;
+  max-width: 1680px;
+  height: auto;
+  margin: 170px auto 30px;
+  padding: 2% 3% 3%;
+  background-image: url('cool-background\ \(2\).png');
+  text-align: center;
+  border-radius: 8px;
+}
+
+.about-body{
+  background-image: url('cool-background.png');
+  background-size: cover;
+  background-position: center;
+  height: auto;
+}
+
+.about-section p {
+  line-height: 180%;
+  font-size: 1.84rem;
+  color: #611566;
+}
+.about-section hr {
+  width: 40%;
+  border-color: #f13838;
+}
+.about-section a {
+  font-weight: 400;
+  color: #f13838;
+}
+.about-section h2 {
+  color: #bb1010;
+}
+.about-section h3 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #f13838;
+}
+a.contact {
+  margin: 0 3%;
+  font-size: 2.5rem;
+}
+
+
+/* red #FF0000 */
 
 
 
-
-
-
-
-
-
-
+/* Wobble Skew */
+@-webkit-keyframes hvr-wobble-skew {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+@keyframes hvr-wobble-skew {
+  16.65% {
+    -webkit-transform: skew(-12deg);
+    transform: skew(-12deg);
+  }
+  33.3% {
+    -webkit-transform: skew(10deg);
+    transform: skew(10deg);
+  }
+  49.95% {
+    -webkit-transform: skew(-6deg);
+    transform: skew(-6deg);
+  }
+  66.6% {
+    -webkit-transform: skew(4deg);
+    transform: skew(4deg);
+  }
+  83.25% {
+    -webkit-transform: skew(-2deg);
+    transform: skew(-2deg);
+  }
+  100% {
+    -webkit-transform: skew(0);
+    transform: skew(0);
+  }
+}
+.hvr-wobble-skew {
+  display: inline-block;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+.hvr-wobble-skew:hover, .hvr-wobble-skew:focus, .hvr-wobble-skew:active {
+  -webkit-animation-name: hvr-wobble-skew;
+  animation-name: hvr-wobble-skew;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
 
 
 

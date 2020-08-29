@@ -39,6 +39,10 @@ async function tagupdate() {
                  <a href=/play.html?s=${game.link}>Play</a>
                  </div>`
     }).join('\n')
+    document.querySelector('.headlineCa').scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+    });
     console.log('tagupdate done');
 }
 
@@ -55,6 +59,10 @@ async function catupdate() {
                  <a href=/play.html?s=${game.link}>Play</a>
                  </div>`
     }).join('\n')
+    document.querySelector('.headlineCa').scrollIntoView({
+        block: "start",
+        behavior: "smooth",
+    });
     console.log('catupdate done');
 }
 
