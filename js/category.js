@@ -2,7 +2,7 @@ var main = document.querySelector('.main');
 var g = location.search;
 var cats = ["Physics", "Kids", "Brain", "Boys", "Highscore", "Endless Runner", "Christmas", "Avoid", "Animals", "Arcade", "Matching", "Cars", "Card", "Timing", "Platformer", "Skill", "Simulation", "Adventure", "Zombie", "Puzzle", "Bubble Shooter", "Educational", "Cooking", "Action", "Fun", "Family", "Cartoon", "Basketball", "Football", "Driving", "Sports", "Cute", "Painting", "Strategy", "Box2D", "Halloween", "Tower Defense", "Surgery", "Celebrity", "Mahjong", "Princess", "Dress Up", "Doll", "Decorating", "Makeover", "Make Up", "Brai", "Cognitive", "Hidden Objects", "Shooting", "Rapunzel", "Avoi", "Angela", "Winx", "Minions", "Avo", "Sofia", "Cut", "Wedding", "Love", "Job", "Baby", "Pou", "Monster high", "Animal", "Dog", "Barbie", "Pregnant"];
 document.querySelector('.catbox').innerHTML = cats.map(e => {
-    return `<a class=cata  onclick=tagupdater(); href=?tag=${e}>${e}</a>`
+    return `<a class="cata"  onclick="tagupdater();" href=?tag=${e}>${e}</a>`
 });
 
 
@@ -72,7 +72,7 @@ async function catupdate() {
         return `<div class=box>
                  <img src=${game.thumb}>
                  <h2>${game.title}</h2><hr>
-                 <p>category :</p><a class=category href="#">${game.category}</a><br>
+                 <p>category :</p><a class=category href="category.html?cat=${game.category}">${game.category}</a><br>
                  <a href=/play.html?s=${game.link}>Play</a>
                  </div>`
     }).join('\n')
