@@ -49,7 +49,7 @@ async function getdata(yu = 0) {
             div.innerHTML = `<a href=/play.html?s=${json[i].link}><img src=${json[i].thumb}></a>
                 <h2>${json[i].title}</h2><hr>
                 <p>category :</p><a class=category href="category.html?cat=${json[i].category}">${json[i].category}</a><br>
-                <a href=#}>Play</a>`
+                <a href=/play.html?s=${json[i].link}>Play</a>`
             main.append(div);
             i++;
             cursor = i;
