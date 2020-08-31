@@ -1,6 +1,7 @@
 const main = document.querySelector('.main');
 const a2hs = document.querySelector('.promo');
 const a2hsbtn = document.querySelector('.bt');
+const loader=document.querySelector('.loader');
 let deferredPrompt;
 var cursor;
 var i = 0;
@@ -16,11 +17,14 @@ window.addEventListener('load', async () => {
     const observer = new IntersectionObserver(handleIntersect, options);
     try{observer.observe(document.querySelector('.foot'));}
     catch(err){console.log('observer error');}
-    getdata();
-    
     document.querySelector('.js-nav').addEventListener('click',()=>{
-        document.querySelector('ul').classList.toggle('slide');
-    });
+      document.querySelector('ul').classList.toggle('slide');
+  });
+    await getdata();
+    loader.style.display = 'none';
+    document.querySelector('.indexbody').style.overflowY = 'auto';
+    
+    
 
     window.addEventListener('beforeinstallprompt', function (e) {
         e.preventDefault();
