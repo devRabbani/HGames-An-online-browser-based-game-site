@@ -75,3 +75,14 @@ workbox.routing.registerRoute(new RegExp('https://s.h5games.online/images/(.*)')
       bgSyncPlugin
   }), ]
 }));                                  
+
+
+workbox.routing.registerRoute(new RegExp('https://m.shtoss.com/.(.*)'), new workbox.strategies.StaleWhileRevalidate({
+  cacheName: 'play-cache',
+  plugins: [new workbox.expiration.ExpirationPlugin({
+      maxAgeSeconds: 3 * 24 * 60 * 60,
+  }), new workbox.cacheableResponse.CacheableResponsePlugin({
+      statuses: [0, 200],
+      bgSyncPlugin
+  }), ]
+}));
