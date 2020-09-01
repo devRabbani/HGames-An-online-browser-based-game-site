@@ -1,8 +1,8 @@
 {
   "lang": "en",
-  "name": "Simple NewZ App",
-  "description": "Simple Newz,A simple free progressive News app for the latest news, Top headlines from many sources. You can select sources from all over the world .This can also be used in offline mode, apart from this we can also install it in our system. It is a very lightweight app as compare to other apps.",
-  "short_name": "SNewz",
+  "name": "HTML5 GAMES APP",
+  "description": "It is a browser based html5 online games platform where you can play free game without needed to download it.",
+  "short_name": "HGAMES",
   "icons": [{
     "src": "/images/b512.png",
     "sizes": "512x512",
@@ -42,7 +42,30 @@
   ],
   "display": "standalone",
   "start_url": ".",
-  "background_color": "#b7c0c1",
-  "theme_color": "#0088CC",
-  "categories": ["news", "magazines", "politics","sports"]
+  "background_color": "#DDDDDF",
+  "theme_color": "#f13838",
+  "categories": ["games"],
+    "shortcuts" : [
+  {
+    "name": "Categories",
+    "url": "pages/category.html",
+    "description": "Categories and tags of all games"
+  },
+  {
+    "name": "Play Tank",
+    "url": "/pages/play.html?s=https://m.shtoss.com/game/tank-vs-tiles/index.html",
+    "icons": [
+        {
+          "src": "/images/tank.jpg",
+          "sizes":"150x150",
+          "type": "image/jpg",
+          "purpose": "any"
+        }
+      ]
+  },
+  {
+    "name": "Shooters Games",
+    "url": "/pages/category.html?cat=shooters"
+  }
+]
 }

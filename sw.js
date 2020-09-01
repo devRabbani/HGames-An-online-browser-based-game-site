@@ -25,10 +25,6 @@ workbox.precaching.precacheAndRoute([
     "revision": "d3491ee39ec08dd4a19cd1b74bd59a47"
   },
   {
-    "url": "images/icon.svg",
-    "revision": "b921974a86d4ab62af744db602d2e8c4"
-  },
-  {
     "url": "style/index.css",
     "revision": "9d621775b92646560eb5c5ddf04dde37"
   },

@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel=manifest href=manifest.webmenifest>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="msapplication-starturl" content="/">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
-    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
+    <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css> <link
+        rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
     <link rel="preload" as="image" href="/images/Dualring.svg">
     <link rel="stylesheet" href="/style/index.css">
     <title>HGame</title>
 </head>
+
 <body class="indexbody">
     <header>
         <nav class="navbar wrapper">
@@ -19,50 +27,51 @@
             <a href=/index.html class='logo'><img class=bounce-in-fwd src=/images/hgames.svg alt=HGames_Logo></a>
             <ul class="main-nav js-menu">
                 <li>
-                    <a class=active href=/index.html>Home</a>
-                </li>
-                <li>
-                    <a href=/pages/category.html>Category</a>
-                </li>
-                <li>
-                    <a href=/pages/about.html>About</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <div class="wrapper">
-        <div class='promo bounce-in-fwd1'>
-            <p>Access this site fast and offline with our PWA.</p>
-            <button name=install class=bt>Install</button>
-        </div>
-        <h1 class="headlineIn">Games</h1>
-        <hr class="headlinehr">
-        <div class="main">
-            <div class=loader><img src=/images/DualRing.svg alt=loading></div>
-        </div>
-    </div>
-    <footer class=foot>
-        <p>Copyright &copy; 2020 by CanWeBe! Inc. All rights are reserved</p> &nbsp; <a
-            href="https://www.privacypolicytemplate.net/live.php?token=kjGD3UQtV4sFhvQ8iizS66EYcfdKaaMS">Privacy
-            Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
-            href=https://www.termsfeed.com/terms-service/22332157cae9c1ab0d968ac4b3ab5d62>Terms of Use</a>
-    </footer>
-    <div class=row>
-        <p class=production><strong>&#9679; A GOLAM RABBANI PRODUCTION &#9679;</strong></p>
-    </div>
+                    <a class=active href=/index.html>Home </a> </li> <li>
+                        <a href=/pages/category.html>Category </a> </li> <li>
+                            <a href=/pages/about.html>About </a> </li> </ul> </nav> </header> <div class="wrapper">
+                                <div class='promo bounce-in-fwd1'>
+                                    <p>Access this site fast and offline with our PWA.</p>
+                                    <button name=install class=bt>Install</button>
+                                </div>
+                                <h1 class="headlineIn">Games</h1>
+                                <hr class="headlinehr">
+                                <div class="main">
+                                    <div class=loader><img src=/images/DualRing.svg alt=loading></div>
+                                </div>
+                                </div>
+                                <footer class=foot>
+                                    <p>Copyright &copy; 2020 by CanWeBe! Inc. All rights are reserved</p> &nbsp; <a
+                                        href="https://www.privacypolicytemplate.net/live.php?token=kjGD3UQtV4sFhvQ8iizS66EYcfdKaaMS">Privacy
+                                        Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a
+                                        href=https://www.termsfeed.com/terms-service/22332157cae9c1ab0d968ac4b3ab5d62>Terms
+                                        of Use</a> </footer> <div class=row>
+                                        <p class=production><strong>&#9679; A GOLAM RABBANI PRODUCTION &#9679;</strong>
+                                        </p>
+                                        </div>
 </body>
 <script>
     if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(registration => {
-            console.log(`Service Worker registered! Scope: ${registration.scope}`);
-          })
-          .catch(err => {
-            console.log(`Service Worker registration failed: ${err}`);
-          });
-      });
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js')
+                .then(registration => {
+                    console.log(`Service Worker registered! Scope: ${registration.scope}`);
+                })
+                .catch(err => {
+                    console.log(`Service Worker registration failed: ${err}`);
+                });
+        });
     }
-  </script>
+    if (navigator.share) {
+  navigator.share({
+    title: 'HGames',
+    text: 'Checkout exciting free game without any download',
+    url: 'https://ranto.netlify.app',
+  })
+    .then(() => console.log('Successful share'))
+    .catch((error) => console.log('Error sharing', error));
+}
+</script>
 <script src="/js/index.js"></script>
+
 </html>
