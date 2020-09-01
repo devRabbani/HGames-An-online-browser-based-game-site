@@ -6,8 +6,8 @@
     <link rel=manifest href=manifest.webmenifest>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet">
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css>
-    <link rel="preload" as="image" href="img/Dualring.svg">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="preload" as="image" href="/images/Dualring.svg">
+    <link rel="stylesheet" href="/style/index.css">
     <title>HGame</title>
 </head>
 <body class="indexbody">
@@ -16,16 +16,16 @@
             <span class="navbar-toggle js-nav">
                 <i class="fa fa-bars"></i>
             </span>
-            <a href=index.html class='logo'><img class=bounce-in-fwd src=images/hgames.svg alt=HGames_Logo></a>
+            <a href=/index.html class='logo'><img class=bounce-in-fwd src=/images/hgames.svg alt=HGames_Logo></a>
             <ul class="main-nav js-menu">
                 <li>
-                    <a class=active href=index.html>Home</a>
+                    <a class=active href=/index.html>Home</a>
                 </li>
                 <li>
-                    <a href=category.html>Category</a>
+                    <a href=/pages/category.html>Category</a>
                 </li>
                 <li>
-                    <a href=about.html>About</a>
+                    <a href=/pages/about.html>About</a>
                 </li>
             </ul>
         </nav>
@@ -38,7 +38,7 @@
         <h1 class="headlineIn">Games</h1>
         <hr class="headlinehr">
         <div class="main">
-            <div class=loader><img src=images/DualRing.svg alt=loading></div>
+            <div class=loader><img src=/images/DualRing.svg alt=loading></div>
         </div>
     </div>
     <footer class=foot>
@@ -52,11 +52,17 @@
     </div>
 </body>
 <script>
- if('serviceWorker' in navigator){
-navigator.serviceWorker.register('js/sw.js')
- .then(reg => console.log('service worker registered'))
- .catch(err => console.log('service worker not registered', err));
-}
-</script>
-<script src="js/index.js"></script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log(`Service Worker registered! Scope: ${registration.scope}`);
+          })
+          .catch(err => {
+            console.log(`Service Worker registration failed: ${err}`);
+          });
+      });
+    }
+  </script>
+<script src="/js/index.js"></script>
 </html>

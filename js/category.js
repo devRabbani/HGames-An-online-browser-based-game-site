@@ -52,8 +52,8 @@ async function tagupdate() {
         return `<div class=box>
                  <img src=${game.thumb}>
                  <h2>${game.title}</h2><hr>
-                 <p>category :</p><a class=category href="#">${game.category}</a><br>
-                 <a href=/play.html?s=${game.link}>Play</a>
+                 <p>category :</p><a class=category href="/pages/category.html?cat=${json[i].category}">${game.category}</a><br>
+                 <a href=/pages/play.html?s=${game.link}>Play</a>
                  </div>`
     }).join('\n')
     document.querySelector('.headlineCa').scrollIntoView({
@@ -72,8 +72,8 @@ async function catupdate() {
         return `<div class=box>
                  <img src=${game.thumb}>
                  <h2>${game.title}</h2><hr>
-                 <p>category :</p><a class=category href="category.html?cat=${game.category}">${game.category}</a><br>
-                 <a href=/play.html?s=${game.link}>Play</a>
+                 <p>category :</p><a class=category href="/pages/category.html?cat=${game.category}">${game.category}</a><br>
+                 <a href=/pages/play.html?s=${game.link}>Play</a>
                  </div>`
     }).join('\n')
     document.querySelector('.headlineCa').scrollIntoView({

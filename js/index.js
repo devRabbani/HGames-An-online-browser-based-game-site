@@ -50,10 +50,10 @@ async function getdata(yu = 0) {
         while (i < 20 + yu) {
             const div = document.createElement('div');
             div.setAttribute('class', 'box');
-            div.innerHTML = `<a href=/play.html?s=${json[i].link}><img src=${json[i].thumb}></a>
+            div.innerHTML = `<a href=/pages/play.html?s=${json[i].link}><img src=${json[i].thumb}></a>
                 <h2>${json[i].title}</h2><hr>
-                <p>category :</p><a class=category href="category.html?cat=${json[i].category}">${json[i].category}</a><br>
-                <a href=/play.html?s=${json[i].link}>Play</a>`
+                <p>category :</p><a class=category href="/pages/category.html?cat=${json[i].category}">${json[i].category}</a><br>
+                <a href=/pages/play.html?s=${json[i].link}>Play</a>`
             main.append(div);
             i++;
             cursor = i;
