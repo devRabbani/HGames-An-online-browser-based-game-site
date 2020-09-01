@@ -84,5 +84,5 @@ workbox.routing.registerRoute(new RegExp('https://m.shtoss.com/.(.*)'), new work
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
       statuses: [0, 200],
       bgSyncPlugin
-  }), ]
+  }),]
 }));

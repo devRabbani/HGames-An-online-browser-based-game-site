@@ -2,6 +2,7 @@ const main = document.querySelector('.main');
 const a2hs = document.querySelector('.promo');
 const a2hsbtn = document.querySelector('.bt');
 const loader=document.querySelector('.loader');
+const headlinein=document.querySelector('.headlineIn');
 let deferredPrompt;
 var cursor;
 var i = 0;
@@ -75,11 +76,13 @@ function handleIntersect(entries) {
 function showAddToHomeScreen() {
     a2hs.style.display = 'block';
     loader.style.top = '50%';
+    headlinein.style.marginTop='0px';
     a2hsbtn.addEventListener('click', addToHomeScreen);
   }
   function addToHomeScreen() {
     a2hs.style.display = 'none';
     loader.style.top = '40%';
+    headlinein.style.marginTop='140px';
     deferredPrompt.prompt();
     deferredPrompt.userChoice.then(function (choiceResult) {
       if (choiceResult.outcome === 'accepted') {
