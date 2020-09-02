@@ -393,7 +393,18 @@ a.contact {
   transform: scale(0.9);
 }
 
+.searchbardiv{
+  width: 60%;
+  margin: 0 auto;
+}
 
+#searchbar{
+  width: 100%;
+  padding: 2%;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
 
 /* ANIMATIONS  */
 /* BOUNCE IN FWD */

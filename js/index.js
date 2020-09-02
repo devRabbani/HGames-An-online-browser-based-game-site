@@ -70,7 +70,6 @@ function handleIntersect(entries) {
     // if (entries[0].isIntersecting) {
     //     getdata(cursor);
     // }
-    console.log('gud');
 }
 
 function showAddToHomeScreen() {

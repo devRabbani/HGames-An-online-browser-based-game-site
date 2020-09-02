@@ -41,13 +41,7 @@ workbox.precaching.precacheAndRoute([
     "revision": "f6772fb0d62bc4926dde2e5dbdd1a3e2"
   }
 ]);
-workbox.routing.registerRoute(new RegExp('\.(png|jpg|jpeg|ico)$'), new workbox.strategies.CacheFirst({
-  cacheName: 'images-cache',
-  plugins: [new workbox.expiration.ExpirationPlugin({
-      maxEntries: 50,
-      maxAgeSeconds: 30 * 24 * 60 * 60,
-  })]
-}));
+
 const bgSyncPlugin = new workbox.backgroundSync.BackgroundSyncPlugin('myQueueName', {
   maxRetentionTime: 24 * 60
 });
@@ -77,6 +71,17 @@ workbox.routing.registerRoute(new RegExp('https://m.shtoss.com/.(.*)'), new work
   cacheName: 'play-cache',
   plugins: [new workbox.expiration.ExpirationPlugin({
       maxAgeSeconds: 3 * 24 * 60 * 60,
+  }), new workbox.cacheableResponse.CacheableResponsePlugin({
+      statuses: [0, 200],
+      bgSyncPlugin
+  }),]
+}));
+
+
+workbox.routing.registerRoute(new RegExp('/pages/category.html(.*)'), new workbox.strategies.StaleWhileRevalidate({
+  cacheName: 'category-cache',
+  plugins: [new workbox.expiration.ExpirationPlugin({
+      maxAgeSeconds:2* 24 * 60 * 60,
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
       statuses: [0, 200],
       bgSyncPlugin
