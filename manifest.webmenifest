@@ -1,8 +1,8 @@
 {
   "lang": "en",
   "name": "HTML5 GAMES APP",
-  "description": "It is a browser based html5 online games platform where you can play free game without needed to download it.",
-  "short_name": "HGAMES",
+  "description": "It is a html5 online games platform where you and your loving one can play free games without needed to download.",
+  "short_name": "HGames",
   "icons": [{
     "src": "/images/b512.png",
     "sizes": "512x512",
@@ -42,30 +42,44 @@
   ],
   "display": "standalone",
   "start_url": ".",
-  "background_color": "#DDDDDF",
+  "background_color": "#FE8965",
   "theme_color": "#f13838",
   "categories": ["games"],
     "shortcuts" : [
   {
-    "name": "Categories",
+    "name": "Search Game",
     "url": "pages/category.html",
-    "description": "Categories and tags of all games"
+    "description": "Categories and Search games",
+    "icons": [
+        {
+          "src": "/images/search.png",
+          "type": "image/png",
+          "sizes":"192x192",
+          "purpose": "any"
+        }
+      ]
   },
   {
     "name": "Play Tank",
     "url": "/pages/play.html?s=https://m.shtoss.com/game/tank-vs-tiles/index.html",
     "icons": [
         {
-          "src": "/images/tank.jpg",
-          "sizes":"150x150",
-          "type": "image/jpg",
-          "purpose": "any"
+          "src": "/images/tank.png",
+          "sizes":"192x192",
+          "type": "image/png"
         }
       ]
   },
   {
     "name": "Shooters Games",
-    "url": "/pages/category.html?cat=shooters"
+    "url": "/pages/category.html?cat=shooters",
+    "icons": [
+        {
+          "src": "/images/target.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        }
+      ]
   }
 ]
 }

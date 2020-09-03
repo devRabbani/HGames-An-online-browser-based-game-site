@@ -383,6 +383,7 @@ a.contact {
   transition: all 0.6s;
   border: 1px solid white;
   outline: none;
+  cursor: pointer;
 }
 .bt:hover,
 .bt:focus {
@@ -400,13 +401,68 @@ a.contact {
 
 #searchbar{
   width: 100%;
-  padding: 2%;
-  border: none;
-  border-radius: 10px;
+  padding: 12px 24px;
+  line-height: 18px;
+  margin-top: 20px;
+  border-radius: 30px;
   outline: none;
+  letter-spacing: 1px;
+  color:whitesmoke ;
+  background: transparent;
+  font-size: 1.6rem;
+  border: 2px solid rgb(211, 204, 204);
+  transition: all 250ms ease-in-out;
 }
 
+#searchbar::placeholder{
+  color:#f8fbff9c;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+#searchbar:hover,
+#searchbar:focus {
+    padding: 12px 0;
+    outline: 0;
+    border: 2px solid transparent;
+    border-bottom: 2px solid rgb(211, 204, 204);
+    border-radius: 0;
+}
+
+
+
 /* ANIMATIONS  */
+
+
+@keyframes backInDown {
+  0% {
+    transform: translateY(-1200px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  80% {
+    transform: translateY(0px) scale(0.7);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.backInDown {
+  animation: backInDown 1s both;
+  animation-delay: .4s;
+}
+
+
+
+
+
+
 /* BOUNCE IN FWD */
 .bounce-in-fwd,
 .bounce-in-fwd1 {
@@ -569,6 +625,9 @@ a.contact {
     width: 85%;
     padding: 1% 2%;
   }
+  footer{
+    margin-top: 135px;
+  }
 }
 
 @media (max-width:791px) {
@@ -577,6 +636,7 @@ a.contact {
   }
   footer{
     height: 45px;
+    margin-top: 0;
   }
   .catbox {
     width: 80%;
@@ -620,6 +680,9 @@ a.contact {
   .promo p,.bt {
     font-size:2rem ;
   }
+  .searchbardiv{
+    width: 75%;
+  }
 
 }
 
@@ -629,7 +692,9 @@ a.contact {
   .navbar-toggle {
     display: block;
   }
-
+  #searchbar::placeholder{
+    font-size: 1.4rem;
+  }
   nav ul {
     position: fixed;
     width: 100%;
@@ -699,7 +764,16 @@ a.contact {
     flex-basis: 180px;
     margin: 2%;
   }
-
+  #searchbar{
+    padding: 9px 11px;
+  }
+  #searchbar:hover,
+  #searchbar:focus {
+    padding: 9px 0;
+  }
+  #searchbar::placeholder{
+    font-size: 1.3rem;
+  }
   .box img {
     width: 160px;
   }
@@ -734,6 +808,7 @@ a.contact {
   .box {
     flex-basis: 170px;
     flex: 1 1;
+    max-width: 180px;
     padding: 2px 0 2%;
   }
 
@@ -760,6 +835,7 @@ a.contact {
   }
   footer{
     height:38px;
+    margin-top: 120px;
   }
   .loader img{
     width: 140px;
@@ -772,6 +848,17 @@ a.contact {
   .promo .bt {
     font-size: 2.1rem;
     width: 120px;
+}
+
+#searchbar{
+  padding: 8px 9px;
+}
+#searchbar:hover,
+#searchbar:focus {
+  padding: 8px 0;
+}
+#searchbar::placeholder{
+  font-size: 1.3rem;
 }
 }
 
@@ -799,6 +886,16 @@ a.contact {
 
   .loader img{
     width: 100px;
+  }
+  #searchbar{
+    padding:6px 9px;
+  }
+  #searchbar:hover,
+  #searchbar:focus {
+    padding: 6px 0;
+  }
+  #searchbar::placeholder{
+    font-size: 1rem;
   }
 }
 
