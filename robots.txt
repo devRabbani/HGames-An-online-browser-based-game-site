@@ -1,0 +1,2 @@
+User-agent: * Disallow:
+Sitemap: https://hgames.netlify.app/sitemap.xml

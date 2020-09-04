@@ -2,19 +2,19 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox
 workbox.precaching.precacheAndRoute([
   {
     "url": "index.html",
-    "revision": "7f50bb7547a1491d1461237bc2890ed7"
+    "revision": "14f8a782bf4141f7b54323d1cc4c499f"
   },
   {
     "url": "pages/category.html",
-    "revision": "c52291d125490bd53eb5cb3ff589ecaf"
+    "revision": "0a88b2274283601be911a5be873e9ea5"
   },
   {
     "url": "pages/about.html",
-    "revision": "34e64e0718b0b3bfe025d037da768000"
+    "revision": "a024a9953770c5b372913cf5addaa168"
   },
   {
     "url": "pages/play.html",
-    "revision": "0c7551d6ce4dc1bc02d4e4372cf4dc51"
+    "revision": "f7767723b81758c083906237b5b64ba5"
   },
   {
     "url": "images/DualRing.svg",
@@ -25,20 +25,24 @@ workbox.precaching.precacheAndRoute([
     "revision": "d3491ee39ec08dd4a19cd1b74bd59a47"
   },
   {
+    "url": "images/icon.svg",
+    "revision": "b921974a86d4ab62af744db602d2e8c4"
+  },
+  {
     "url": "style/index.css",
-    "revision": "9d621775b92646560eb5c5ddf04dde37"
+    "revision": "be8b59f764279128ce628e787cd6b196"
   },
   {
     "url": "style/cool-background.png",
-    "revision": "0fbfd760c286480cb41cd1e0816bb9ea"
+    "revision": "3884bcff8fbc06d758f12350e50072ba"
   },
   {
     "url": "js/index.js",
-    "revision": "9864b54696b37c5cf7e515f639f1fb39"
+    "revision": "853098a5ca0af697abc62fad2d69fc16"
   },
   {
     "url": "js/category.js",
-    "revision": "f6772fb0d62bc4926dde2e5dbdd1a3e2"
+    "revision": "51f10fff56fec0f13ff0d803194ebdc5"
   }
 ]);
 
