@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +10,18 @@
     <link rel="stylesheet" href="/style/index.css">
     <title>play</title>
 </head>
+
 <body class=gameroom>
     <iframe width="100%" height="100%" src="/index.html" allowfullscreen="true" scrolling="no"></iframe>
 </body>
 <script>
     var contentID;
     s = location.search;
-        if(s != '') {
-            var split = s.split('=');
-            contentID = split[1];
-        }
-    document.querySelector('iframe').setAttribute('src',contentID)    
+    if (s != '') {
+        var split = s.split('=');
+        contentID = split[1];
+    }
+    document.querySelector('iframe').setAttribute('src', contentID)
 </script>
+
 </html>

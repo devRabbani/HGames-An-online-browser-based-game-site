@@ -1,6 +1,5 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js');
-workbox.precaching.precacheAndRoute([
-  {
+workbox.precaching.precacheAndRoute([{
     "url": "index.html",
     "revision": "14f8a782bf4141f7b54323d1cc4c499f"
   },
@@ -53,41 +52,41 @@ workbox.routing.registerRoute(new RegExp('/games.json(.*)'), new workbox.strateg
   cacheName: 'games-cache',
   networkTimeoutSeconds: 5,
   plugins: [new workbox.expiration.ExpirationPlugin({
-      maxAgeSeconds: 3 * 24 * 60 * 60,
+    maxAgeSeconds: 3 * 24 * 60 * 60,
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
-      statuses: [0, 200],
-      bgSyncPlugin
+    statuses: [0, 200],
+    bgSyncPlugin
   }), ]
 }));
 
 workbox.routing.registerRoute(new RegExp('https://s.h5games.online/images/(.*)'), new workbox.strategies.StaleWhileRevalidate({
   cacheName: 'image-cache',
   plugins: [new workbox.expiration.ExpirationPlugin({
-      maxAgeSeconds: 3 * 24 * 60 * 60,
+    maxAgeSeconds: 3 * 24 * 60 * 60,
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
-      statuses: [0, 200],
-      bgSyncPlugin
+    statuses: [0, 200],
+    bgSyncPlugin
   }), ]
-}));                                  
+}));
 
 
 workbox.routing.registerRoute(new RegExp('https://m.shtoss.com/.(.*)'), new workbox.strategies.StaleWhileRevalidate({
   cacheName: 'play-cache',
   plugins: [new workbox.expiration.ExpirationPlugin({
-      maxAgeSeconds: 3 * 24 * 60 * 60,
+    maxAgeSeconds: 3 * 24 * 60 * 60,
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
-      statuses: [0, 200],
-      bgSyncPlugin
-  }),]
+    statuses: [0, 200],
+    bgSyncPlugin
+  }), ]
 }));
 
 
 workbox.routing.registerRoute(new RegExp('/pages/category.html(.*)'), new workbox.strategies.StaleWhileRevalidate({
   cacheName: 'category-cache',
   plugins: [new workbox.expiration.ExpirationPlugin({
-      maxAgeSeconds:2* 24 * 60 * 60,
+    maxAgeSeconds: 2 * 24 * 60 * 60,
   }), new workbox.cacheableResponse.CacheableResponsePlugin({
-      statuses: [0, 200],
-      bgSyncPlugin
-  }),]
+    statuses: [0, 200],
+    bgSyncPlugin
+  }), ]
 }));
