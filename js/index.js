@@ -51,7 +51,7 @@ async function getdata(yu = 0) {
         while (i < 20 + yu) {
             const div = document.createElement('div');
             div.setAttribute('class', 'box');
-            div.innerHTML = `<a href=/pages/play.html?s=${json[i].link}><img src=${json[i].thumb}></a>
+            div.innerHTML = `<a href=/pages/play.html?s=${json[i].link}><img src=${json[i].thumb} alt=${json[i].title}_logo></a>
                 <h2>${json[i].title}</h2><hr>
                 <p>category :</p><a class=category href="/pages/category.html?cat=${json[i].category}">${json[i].category}</a><br>
                 <a href=/pages/play.html?s=${json[i].link}>Play</a>`
@@ -67,9 +67,9 @@ async function getdata(yu = 0) {
 }
 
 function handleIntersect(entries) {
-    // if (entries[0].isIntersecting) {
-    //     getdata(cursor);
-    // }
+    if (entries[0].isIntersecting) {
+        getdata(cursor);
+    }
 }
 
 function showAddToHomeScreen() {
