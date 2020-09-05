@@ -89,7 +89,7 @@ async function catupdate() {
 
 function creator(game) {
     return `<div class=box>
-    <img src=${game.thumb} alt=${json[i].title}_logo>
+    <img src=${game.thumb} alt=${game.title}_logo>
     <h2>${game.title}</h2><hr>
     <p>category :</p><a class=category href="/pages/category.html?cat=${game.category}">${game.category}</a><br>
     <a href=/pages/play.html?s=${game.link}>Play</a>
